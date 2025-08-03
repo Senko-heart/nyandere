@@ -88,7 +88,7 @@ impl CSX {
             return Err(Error::BadSection(*b"conststr"));
         }
 
-        if !linkinf.is_empty() && linkinf != [0; 16] {
+        if !linkinf.is_empty() && linkinf != [0; 16] && base {
             return Err(Error::BadSection(*b"linkinf "));
         }
 
